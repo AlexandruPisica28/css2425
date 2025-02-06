@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 25px;
+            color: green;
+        }
+        .demo2{
+            color:blue;
+            font-size: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button id="apasa">Schimba culoarea</button>
+    <button id="apasa2">Schimba div</button>
+    <button id="apasa3">Schimba demo</button>
+   
+        <div id="para">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nihil.</p>
+            <p>Consequatur voluptate nobis veritatis nihil corporis aperiam totam deserunt maxime!</p>
+            <p>Omnis magnam perspiciatis sit nihil saepe unde enim id delectus.</p>
+            <p>Dolore, voluptate eum vero fuga libero possimus sapiente nemo reprehenderit!</p>
+            <p>Optio quam culpa autem animi aperiam rerum necessitatibus vitae aliquid?</p>
+            <p>Facere expedita minima dignissimos, itaque necessitatibus delectus obcaecati quasi accusamus!</p>
+            <p>Quos iusto suscipit unde nam, iste temporibus est esse tenetur.</p>
+            <p>Eius temporibus, aut nisi debitis quas sint odit cum architecto.</p>
+            <p>A dolorem ipsum porro enim corporis distinctio provident. Similique, debitis.</p>
+            <p>Laboriosam dolore distinctio accusamus, facilis doloremque eius. Dignissimos, dolorem voluptatem.</p>
+        </div>
+
+        <p class="demo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem aut soluta sapiente alias explicabo iusto dolorem voluptates pariatur incidunt amet.</p>
+        <p class="demo">Cum iusto ducimus modi ipsum sint laudantium sunt eaque, quia nesciunt praesentium repudiandae ipsam minus doloremque vero dolorum aperiam quae!</p>
+        <p class="demo">Sequi ratione nemo id nihil ut velit totam vero harum, quisquam laborum voluptates explicabo nesciunt saepe, in cupiditate quibusdam sed.</p>
+        <p class="demo">Nobis ab animi consequuntur, magni vero aperiam iusto, eius fuga tempore illum laudantium facilis debitis, sunt similique quasi corrupti sapiente!</p>
+
+        <script>
+            let btn = document.getElementById('apasa');
+            let p = document.getElementsByTagName('p');
+            let btn2 = document.getElementById('apasa2');
+            let div = document.getElementById('para');
+            let btn3 = document.getElementsById('apasa3');
+            let paraDemo = document.getElementsByClassName('demo');
+            console.log('p :>> ', p);
+            btn.addEventListener('click', function(){
+                // for (const element of p){
+                //     element.style.color= 'red';
+                // }
+                let arry = [...p]
+                arry.forEach((element) => {
+                    element.style.color = 'red';
+                    element.font.fontSize = '34px';
+                });
+                // p[0].style.color = 'red';
+            });
+            btn2.addEventListener('click', function(){
+                div.style.cssText = "background-color: blue; color: white; font-size: 20px; margin: auto; border: 15px; padding: 20px"
+            });
+
+            btn3.addEventListener('click', function(){
+                let myArr = [...paraDemo];
+                myArr.forEach((element) =>{
+                    element.classList.add("demo2");
+                });
+            });
+        </script>
+    
+</body>
+</html>
