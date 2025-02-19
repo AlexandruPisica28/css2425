@@ -1,4 +1,7 @@
 
+:root{
+ --colorPrim: #9210ea;
+}
 
 /*--------------------------------------------------------------
 # General
@@ -14,7 +17,7 @@ a {
 }
 
 a:hover {
-  color: #3b8af2;
+  color: var(--colorPrim);
   text-decoration: none;
 }
 
